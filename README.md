@@ -28,11 +28,10 @@ Devido aos limites de tamanho de arquivo do GitHub, o modelo da inteligência ar
 
 1. Baixe ou exporte o modelo **YOLOv8x** no formato ONNX (`yolov8x.onnx`).
 2. Coloque o arquivo na raiz do projeto, na mesma pasta do script principal.
-3. Certifique-se de que o arquivo `.gitignore` do repositório está ignorando a extensão `*.onnx` para evitar erros de limite de tamanho (100MB) no seu próximo push.
 
 ## Configuração de Ambiente (.env)
 
-Por segurança, a URL da câmera não fica exposta no código (e o arquivo `.env` também é ignorado pelo Git). Crie um arquivo `.env` na mesma pasta dos scripts e defina a sua rota de conexão usando a variável `URL_CAM` (que será lida internamente como `URL_RTSP` pelo sistema).
+Por segurança, a URL da câmera não fica exposta no código. Crie um arquivo `.env` na mesma pasta dos scripts e defina a sua rota de conexão usando a variável `URL_CAM` (que será lida internamente como `URL_RTSP` pelo sistema).
 
 Conteúdo do seu arquivo `.env`:
 ```env
