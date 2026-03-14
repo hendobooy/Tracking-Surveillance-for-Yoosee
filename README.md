@@ -16,8 +16,11 @@ Este projeto implementa um sistema de auto-tracking (acompanhamento inteligente)
 Para que a execução na GPU AMD e as automações funcionem corretamente, instale os pacotes abaixo. Bibliotecas como `os`, `time` e `tkinter` já são nativas do Python.
 
 ```bash
-pip install av opencv-python numpy onnxruntime-directml pyautogui python-dotenv
+pip install av opencv-python "numpy<2" onnxruntime-directml pyautogui python-dotenv
 ```
+
+> **💡 RESOLUÇÃO DE PROBLEMAS (AMD + ONNX):**
+> O pacote `onnxruntime-directml` pode apresentar conflitos de compatibilidade com versões do NumPy iguais ou superiores a 2.0. Caso você tenha instalado as bibliotecas separadamente e o script apresente erro ao carregar o modelo na GPU, force o downgrade do NumPy rodando explicitamente o comando: `pip install "numpy<2"`.
 
 ## Modelo YOLOv8 e `.gitignore`
 
@@ -25,6 +28,7 @@ Devido aos limites de tamanho de arquivo do GitHub, o modelo da inteligência ar
 
 1. Baixe ou exporte o modelo **YOLOv8x** no formato ONNX (`yolov8x.onnx`).
 2. Coloque o arquivo na raiz do projeto, na mesma pasta do script principal.
+3. Certifique-se de que o arquivo `.gitignore` do repositório está ignorando a extensão `*.onnx` para evitar erros de limite de tamanho (100MB) no seu próximo push.
 
 ## Configuração de Ambiente (.env)
 
