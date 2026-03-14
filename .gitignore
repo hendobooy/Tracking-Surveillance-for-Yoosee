@@ -1,0 +1,6 @@
+
+# Modelos de IA (muito pesados para o GitHub)
+*.onnx
+
+# Logs do sistema
+conexoes.txt
