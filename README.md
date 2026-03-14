@@ -25,7 +25,6 @@ Devido aos limites de tamanho de arquivo do GitHub, o modelo da inteligência ar
 
 1. Baixe ou exporte o modelo **YOLOv8x** no formato ONNX (`yolov8x.onnx`).
 2. Coloque o arquivo na raiz do projeto, na mesma pasta do script principal.
-3. Certifique-se de que o arquivo `.gitignore` do repositório está ignorando a extensão `*.onnx` para evitar erros de limite de tamanho (100MB) no seu próximo push.
 
 ## Configuração de Ambiente (.env)
 
